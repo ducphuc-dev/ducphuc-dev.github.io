@@ -58,7 +58,6 @@ $(document).ready(function(){
 	
 	$(document).on( 'click', '.btn_filter', function() {
 		var filterValue = $( this ).attr('data-filter');
-		console.log(filterValue);
 		// use filterFn if matches value
 		$grid.isotope({ filter: filterValue });
 		$(".btn_filter.active").removeClass("active");
@@ -117,7 +116,6 @@ $(document).ready(function(){
 	/* Event scroll */
 	window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
-    console.log(scroll);
 		if(scroll >= 300) {
 			$("#top_menu").addClass("fixed_menu");
 			$("#btn_back_to_top").addClass("active");
