@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="vi">
+
+  <head>
+	  <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>NGÔ HOÀNG ĐỨC PHÚC</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+		<!-- Fonts -->
+   	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    
+		<!--  Progress bar  -->
+		<link rel="stylesheet" type="text/css" href="css/loading-bar.min.css"/>
+		
+		<!-- Sal css -->
+		<link rel="stylesheet" type="text/css" href="css/sal.css"/>
+		
+		<!-- Custom CSS   -->
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	
+  <body>
+    <div class="pre_load container-fluid">
+      <div class="load_content row">
+      	
+      </div>
+ 			<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    </div>
+    
+    <div class="main_content">
+			<!--   Page header -->
+    	<section class="page_header" id="particles-js">
+    	
+				<!--   Navigation 		-->
+    		<nav class="navbar navbar-expand-lg " id="top_menu">
+					<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbarNav">
+						<i class="fa fa-bars text-white"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a data-scroll class="nav-link text-white" href="#about_me">About me</a>
+							</li>
+							<li class="nav-item">
+								<a data-scroll class="nav-link text-white" href="#skill">Skill</a>
+							</li>
+							<li class="nav-item">
+								<a data-scroll class="nav-link text-white" href="#history">History</a>
+							</li>
+							<li class="nav-item">
+								<a data-scroll class="nav-link text-white" href="#awards">Awards</a>
+							</li>
+							<li class="nav-item">
+								<a data-scroll class="nav-link text-white" href="#project">Project</a>
+							</li>
+							<li class="nav-item">
+								<a data-scroll class="nav-link text-white" href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+   			<!--   End Navigation 		-->
+   			
+				<!--   Header Content			-->
+    		<div class="header_content">
+    			<h3 class="text_running_hello"></h3>
+    			<h1 class="cl_orange biggest_text text_running_name"></h1>
+    			<h3 class="job text_running_job mt-3"></h3>
+    			<div class="get_start my-4">
+    				<button class="btn btn_orange btn_start"> GET START <i class="fa fa-chevron-right mx-2"></i></button>
+    			</div>
+    		</div>
+    		<!--   End eader Content			-->
+    		
+    	</section>
+    	<!--   End Page header -->
+    	
+    	
+    	<!--   About me -->
+    	<section id="about_me" class="container py-5">
+    		<div class="row d-flex" data-sal="slide-up" data-sal-duration="800">
+    			<div class="avatar col-12 col-sm-6 my-3 text-center">
+    				<div class="my_picture img-fluid ">
+
+    				</div>
+    				<img class="signature mt-3" src="images/branch.PNG" alt="sign" height="40">
+    			</div>
+    			<div class="info col-12 col-sm-6 mb-3">
+    				<div class="info_title text-center">GIỚI THIỆU</div>
+    				<div class="introduce">
+    					Chào mọi người. Mình là Phúc, là một lập trình viên website. Đam mê lập trình web từ lúc học phổ thông, mình muốn học tập và làm việc với lĩnh vực này. Trong tương lai, mình mong muốn trở thành Full Stack Developer.
+    				</div>
+    				<div class="person_info">
+    					<div class="info_item my-2">
+    						<img src="images/name_64.svg" alt="name" width="40" height="40">
+    						<span>Ngô Hoàng Đức Phúc</span>
+    					</div>
+    					<div class="info_item my-2">
+    						<img src="images/date_64.svg" alt="dob" width="40" height="40">
+    						<span>12 - 02 - 1998</span>
+    					</div>
+    					<div class="info_item my-2">
+    						<img src="images/house_64.svg" alt="address" width="40" height="40">
+    						<span>Thừa Thiên Huế, Việt Nam</span>
+    					</div>
+    					<div class="info_item my-2">
+    						<img src="images/phone_64.svg" alt="phone" width="40" height="40">
+    						<span>0329 3 22 111</span>
+    					</div>
+    					<div class="info_item my-2">
+    						<img src="images/mail_64.svg" alt="mail" width="40" height="40">
+    						<span>ducphucit1202@gmail.com</span>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!--   End About me -->
+    	
+    	
+			<!--  Skill -->
+			<section id="skill" class="container my-3">
+				<h3 class="skill_title">KỸ NĂNG CỦA TÔI</h3>
+				<div class="my_cv text-center">
+					<a class="btn btn_download_cv" download href="files/CV.pdf"><i class="fa fa-download"></i> TẢI XUỐNG CV</a>
+				</div>
+				<div class="row my-4">
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="95" data-fill="data:ldbar/res,bubble(#f64f59,#fff,50,1)"></div>
+						<h5>HTML5</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="90"></div>
+						<h5>CSS3</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="80" data-fill="data:ldbar/res,bubble(#f7ff00,#fff,50,1)"></div>
+						<h5>JS</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="85" data-fill="data:ldbar/res,bubble(#00b09b,#fff,50,1)"></div>
+						<h5>JQUERY</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="60" data-fill="data:ldbar/res,bubble(#db36a4,#fff,50,1)"></div>
+						<h5>ROR</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="55" data-fill="data:ldbar/res,bubble(#99f2c8,#fff,50,1)"></div>
+						<h5>PHP</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="70" data-fill="data:ldbar/res,bubble(#f5af19,#fff,50,1)"></div>
+						<h5>C#</h5>
+					</div>
+					<div class="col-sm-3 text-center my-2">
+						<div class="ldBar label-center skill_bar" data-preset="bubble" data-value="60" data-fill="data:ldbar/res,bubble(#ffc0cb,#fff,50,1)"></div>
+						<h5>JAVA/JSP</h5>
+					</div>
+					
+				</div>
+			</section>
+			<!--  End skill -->
+   	
+   		<!-- Quote -->
+   		<section id="quote">
+   			<div class="quote_content text-center" data-sal="slide-up" data-sal-duration="800">
+   				<div class="quote_title"><h3>Quote</h3></div>
+   				<h4>"Hỏi một câu chỉ dốt trong chốc lát.</h4>
+   				<h4>Nhưng không hỏi sẽ dốt nát cả đời"</h4>
+   				<small>- Ngạn ngữ phương Tây - </small>
+   			</div>
+   		</section>
+   		<!-- End quote -->
+   		
+   		<!-- History -->
+   		<section class="history my-5" id="history">
+				<div class="history_title text-center my-3">
+					<h3>LỊCH SỬ BẢN THÂN</h3>
+				</div>
+      <!-- Main history -->
+				<div class="body container">
+					<div class="row">
+						<div class="timeline">
+							<!-- Item-1 -->
+							<div class="timeline-item" data-sal="slide-right" data-sal-duration="800">
+								<div class="card text-right">
+									<div class="card-body">
+										<h5 class="card-title">Học Phổ Thông</h5>
+										<div class="card-des">2003 - 2016</div>
+										<p class="card-text">Theo học chương trình phổ thông tại Hương Trà, Thừa Thiên Huế. Tham gia kì thi lập trình lần đầu tiên vào năm 2012</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="timeline-icon text-center">
+									<i class="fa fa-clock"></i>
+								</div>
+							</div>
+							<!-- Item-2 -->
+							<div class="timeline-item" data-sal="slide-left" data-sal-duration="800">
+								<div class="card right text-left">
+									<div class="card-body">
+										<h5 class="card-title">Đỗ Đại Học</h5>
+										<div class="card-des">09/2016</div>
+										<p class="card-text">Đỗ vào khoa CNTT, trường Đại học Khoa học, Đại học Huế, chuyên ngành Công nghệ phần mềm</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="timeline-icon text-center">
+									<i class="fa fa-clock"></i>
+								</div>
+							</div>
+							<!-- Item-3 -->
+							<div class="timeline-item" data-sal="slide-right" data-sal-duration="800">
+								<div class="card text-right">
+									<div class="card-body">
+										<h5 class="card-title">Theo Học Lập Trình Web</h5>
+										<div class="card-des">12/2017</div>
+										<p class="card-text">Bắt đầu tham gia học lập trình WEB tại hệ thống Cione Elearning. Đạt học bổng học lập trình web miễn phí 100%. Hoàn thành chương trình vào tháng 08-2018</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="timeline-icon text-center">
+									<i class="fa fa-clock"></i>
+								</div>
+							</div>
+							<!-- Item-4 -->
+							<div class="timeline-item" data-sal="slide-left" data-sal-duration="800">
+								<div class="card right text-left">
+									<div class="card-body">
+										<h5 class="card-title">Công việc đầu tiên</h5>
+										<div class="card-des">10/2018 - Hiện tại</div>
+										<p class="card-text">Là lập trình viên Website (Front end, Ruby on Rails) tại công ty Webmely Huế</p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="timeline-icon text-center">
+									<i class="fa fa-clock"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+    	</section>
+    	<!-- End History -->
+    	
+    	<!-- Awards -->
+    	<section id="awards">
+    		<div class="container my-3">
+    			<div class="d-flex row">
+						<div class="award_img col-12 col-sm-8 offset-sm-2 col-lg-6 offset-lg-0 align-self-stretch" data-sal="slide-down" data-sal-duration="800">
+
+						</div>
+						<div class="award_info col-12 col-sm-8 offset-sm-2 col-lg-6 offset-lg-0 align-self-stretch px-3" data-sal="slide-up" data-sal-duration="800">
+							<div class="award_title">THÀNH TÍCH</div>
+							<div class="award_item my-2">
+								<img src="images/award_64.svg" alt="award">
+								<span>Giải Nhì ACM/ICPC 2018 ĐHKH Huế</span>
+							</div>
+							<div class="award_item my-2">
+								<img src="images/award_64.svg" alt="award">
+								<span>Giải Khuyến Khích ACM/ICPC 2019 ĐHKH Huế</span>
+							</div>
+							<div class="award_item my-2">
+								<img src="images/award_64.svg" alt="award">
+								<span>Học bổng Phuc's Fond 2018</span>
+							</div>
+							<div class="award_item my-2">
+								<img src="images/award_64.svg" alt="award">
+								<span>Học bổng Odon Vallet 2019</span>
+							</div>
+						</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- End Awards -->
+    	
+    	
+    	<!-- Project -->
+    	<section id="project">
+    		<div class="container text-center my-5">
+    			<h3>DỰ ÁN CỦA TÔI</h3>
+    			<div class="row">
+    				<div class="col-12 col-sm-8 offset-sm-2 button_filter text-center my-3">
+    					<button class="btn btn_filter btn_all active" data-filter=".all">Tất cả</button>
+    					<button class="btn btn_filter btn_fe" data-filter=".fe">Front End</button>
+    					<button class="btn btn_filter btn_be" data-filter=".be">Back End</button>
+    				</div>
+    				<div class="col-12">
+    					<div class="project_list row">
+								<div class="project_item col-12 col-sm-4 my-3 all fe" data-name="RINJANI LANDING PAGE" data-avt="images/rinjani_part.PNG" data-date="11-2018" data-status="Hoàn thành" data-language="HTML, CSS, Bootstrap, JS, Jquery" data-image="images/rinjani_full.png" data-source="https://github.com/ducphuc1202/bootstrap1" data-preview="https://ducphuc1202.github.io/bootstrap1">
+									<div class="card_img bg-dark card_img_rinjani text-white">
+
+									</div>
+									<div class="card_overlay">
+										<h5 class="project_name">RINJANI LANDING PAGE</h5>
+										<div class="button_action">
+											<button class="btn btn_action" data-toggle="modal" data-target="#modal_project">Thông tin</button>
+											<a href="https://ducphuc1202.github.io/bootstrap1" target="_blank" class="btn btn_action">Xem</a>
+										</div>
+									</div>
+								</div>
+								<div class="project_item col-12 col-sm-4 my-3 all fe" data-name="APPLAND APP PAGE" data-avt="images/appland_app_part.png" data-date="11-2018" data-status="Hoàn thành" data-language="HTML, CSS, Bootstrap, JS, Jquery" data-image="images/appland_app_full.png" data-source="https://github.com/ducphuc1202/bootstrap2" data-preview="https://ducphuc1202.github.io/bootstrap2">
+									<div class="card_img card_img_app_land text-white">
+
+									</div>
+									<div class="card_overlay">
+										<h5 class="project_name">APPLAND APP PAGE</h5>
+										<div class="button_action">
+											<button class="btn btn_action" data-toggle="modal" data-target="#modal_project">Thông tin</button>
+											<a href="https://ducphuc1202.github.io/bootstrap2" target="_blank" class="btn btn_action">Xem</a>
+										</div>
+									</div>
+								</div>
+								<div class="project_item col-12 col-sm-4 my-3 all fe" data-name="EVENT CLASSIFIED" data-avt="images/event_classifield_part.png" data-date="11-2018" data-status="Hoàn thành" data-language="HTML, CSS, Bootstrap, JS, Jquery" data-image="images/event_classifield_full.png" data-source="https://github.com/ducphuc1202/bootstrap3" data-preview="https://ducphuc1202.github.io/bootstrap3">
+									<div class="card_img card_img_event_classifield text-white">
+
+									</div>
+									<div class="card_overlay">
+										<h5 class="project_name">EVENT CLASSIFIED</h5>
+										<div class="button_action">
+											<button class="btn btn_action" data-toggle="modal" data-target="#modal_project">Thông tin</button>
+											<a href="https://ducphuc1202.github.io/bootstrap3" target="_blank" class="btn btn_action">Xem</a>
+										</div>
+									</div>
+								</div>
+								<div class="project_item col-12 col-sm-4 my-3 all be" data-name="CMS PROJECT" data-avt="images/cms_part.PNG" data-date="12-2019" data-status="Đang thực hiện" data-language="HTML, CSS, Bootstrap, JS, Jquery, PHP" data-image="images/cms_full.PNG" data-source="" data-preview="">
+									<div class="card_img card_img_cms text-white">
+
+									</div>
+									<div class="card_overlay">
+										<h5 class="project_name">CMS PROJECT</h5>
+										<div class="button_action">
+											<button class="btn btn_action" data-toggle="modal" data-target="#modal_project">Thông tin</button>
+											<a href="" target="_blank" class="btn btn_action disabled">Xem</a>
+										</div>
+									</div>
+								</div>
+								<div class="project_item col-12 col-sm-4 my-3 all be" data-name="SMALL SHOPPING" data-avt="images/shop_part.PNG" data-date="11-2019" data-status="Hoàn thành" data-language="HTML, CSS, Bootstrap, JS, Jquery, PHP" data-image="images/shop_full.PNG" data-source="" data-preview="">
+									<div class="card_img card_img_small_shop text-white">
+
+									</div>
+									<div class="card_overlay">
+										<h5 class="project_name">SMALL SHOPPING</h5>
+										<div class="button_action">
+											<button class="btn btn_action" data-toggle="modal" data-target="#modal_project">Thông tin</button>
+											<a href="" target="_blank" class="btn btn_action disabled">Xem</a>
+										</div>
+									</div>
+								</div>
+    					</div>
+    				</div>
+    				
+    			</div>
+    		</div>
+    	</section>
+    	<!-- End project -->
+    	
+    	<!-- Contact -->
+    	<section id="contact" class="mt-3">
+    		<div class="container pb-5">
+    			<h3 class="text-center py-5">LIÊN HỆ VỚI TÔI</h3>
+    			<div class="row" data-sal="slide-up" data-sal-duration="800">
+    				<div class="col-12 col-sm-3 my-3 contact_item text-center">
+    					<div class="contact_main px-3">
+    						<h5 class="contact_title">Điện thoại</h5>
+    						<div class="contact_icon">
+									<i class="fa fa-mobile"></i>
+								</div>
+								<div class="contact_info">
+									0329 3 22 111
+								</div>
+    					</div>
+    					
+    				</div>
+    				<div class="col-12 col-sm-3 my-3 contact_item text-center">
+    					<div class="contact_main px-3">
+    						<h5 class="contact_title">Email</h5>
+								<div class="contact_icon">
+									<i class="fa fa-envelope"></i>
+								</div>
+								<div class="contact_info">
+									ducphucit1202@gmail.com
+								</div>
+							</div>
+    				</div>
+    				<div class="col-12 col-sm-3 my-3 contact_item text-center">
+    					<div class="contact_main px-3">
+    						<h5 class="contact_title">Facebook</h5>
+								<div class="contact_icon">
+									<i class="fab fa-facebook-square"></i>
+								</div>
+								<div class="contact_info">
+									DucPhucIT
+								</div>
+							</div>
+    				</div>
+    				<div class="col-12 col-sm-3 my-3 contact_item text-center">
+    					<div class="contact_main px-3">
+    						<h5 class="contact_title">Địa chỉ</h5>
+								<div class="contact_icon">
+									<i class="fa fa-address-card"></i>
+								</div>
+								<div class="contact_info">
+									24, Ly Thai Tong, Huong Tra, Hue
+								</div>
+							</div>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- End contact -->
+    	
+    </div>
+    
+    <!-- Modal project -->
+		<div class="modal fade" id="modal_project" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">THÔNG TIN SẢN PHẨM</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-sm-6 project_img">
+									<img id="project_image_avt" src="" alt="image_project" class="img-fluid">
+								</div>
+								<div class="col-12 col-sm-6 project_info">
+									<div class="project_info_item my-3">
+										<span><i class="fa fa-info-circle text-info"></i> Tên sản phẩm: </span>
+										<span class="" id="project_name">Mặc định</span>
+									</div>
+									<div class="project_info_item my-3">
+										<span><i class="fa fa-info-circle text-info"></i> Ngày bắt đầu: </span>
+										<span class="" id="project_start">Chưa xác định</span>
+									</div>
+									<div class="project_info_item my-3">
+										<span><i class="fa fa-info-circle text-info"></i> Trạng thái: </span>
+										<span class="" id="project_status">Đang thực hiện</span>
+									</div>
+									<div class="project_info_item my-3">
+										<span><i class="fa fa-info-circle text-info"></i> Ngôn ngữ / Công cụ: </span>
+										<span class="" id="project_language">HTML, CSS, Bootstrap, Jquery</span>
+									</div>
+									<div class="project_info_item my-3 text-center">
+										<a target="_blank" class="btn btn_project_action btn_view_full_image" id="project_image_full"><i class="fas fa-image"></i> Xem ảnh chụp màn hình đầy đủ</a>
+									</div>
+									<div class="project_action my-5 text-center">
+										<a target="_blank" class="btn btn_project_action btn_download_source" id="project_source"><i class="fa fa-download"></i> Tải mã nguồn</a>
+										<a target="_blank" class="btn btn_project_action btn_preview" id="project_preview"><i class="fa fa-eye"></i> Xem trước</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End modal project -->
+		
+		<!-- Back to top -->
+		<a href="#top_menu" id="btn_back_to_top"><i class="fa fa-chevron-up icon_back_to_top"></i></a>
+		<!-- End back to top -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+		<!-- Particles JS   -->
+		<script src="js/particles.min.js"></script>
+		
+		<!-- Text typed	-->
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+		
+		<!-- Progress bar	-->
+		<script type="text/javascript" src="js/loading-bar.min.js"></script>
+		
+		<!-- Isotope JS -->
+		<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+		
+		<!-- Sal JS -->
+		<script src="js/sal.js"></script>
+		
+		<!-- Smoot scroll -->
+		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+		
+		<!-- Custom JS	-->
+		<script src="js/main.js"></script>
+		
+	</body>
+	
+</html>
