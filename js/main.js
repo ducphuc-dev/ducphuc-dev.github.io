@@ -10,7 +10,7 @@ $(document).ready(function(){
 	
 	/* Particles JS */
 	setTimeout(function(){
-		particlesJS.load('particles-js', '../config/particles.json', function() {
+		particlesJS.load('particles-js', 'config/particles.json', function() {
 		console.log('callback - particles.js config loaded');
 		});
 	},3100)
