@@ -199,3 +199,99 @@ ul {
 .footer {
 	line-height: 2;
 }
+
+/* Pricing */
+
+ .pricing .pricing-card .card-item {
+	 padding-left: 15px;
+	 padding-right: 15px;
+	 padding-top: 40px;
+	 font-size: 17px;
+	 text-align: center;
+}
+ .pricing .pricing-card .card-item .card-content {
+	 -webkit-transition: all 300ms;
+	 -o-transition: all 300ms;
+	 transition: all 300ms;
+	 background-color: #fff;
+}
+ .pricing .pricing-card .card-item .card-content .type-price {
+	 font-size: 36px;
+	 font-weight: 300;
+	 background-image: -webkit-gradient(linear, left top, right top, from(#fc466b), to(#0984e3));
+	 background-image: -webkit-linear-gradient(left, #fc466b, #0984e3);
+	 background-image: -o-linear-gradient(left, #fc466b, #0984e3);
+	 background-image: linear-gradient(to right, #fc466b, #0984e3);
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: rgba(9, 132, 227, 0.2);
+}
+ .pricing .pricing-card .card-item .card-content .type-des {
+	 color: #7b7b7b;
+}
+ .pricing .pricing-card .card-item .card-content .price {
+	 background-image: -webkit-gradient(linear, left top, right top, from(#fc466b), to(#0984e3));
+	 background-image: -webkit-linear-gradient(left, #fc466b, #0984e3);
+	 background-image: -o-linear-gradient(left, #fc466b, #0984e3);
+	 background-image: linear-gradient(to right, #fc466b, #0984e3);
+	 background-clip: text;
+	 -webkit-background-clip: text;
+	 color: rgba(9, 132, 227, 0.2);
+	 font-size: 72px;
+}
+ .pricing .pricing-card .card-item .card-content .detail {
+	 color: #7b7b7b;
+}
+ .pricing .pricing-card .card-item .card-content .btn-get-started, .pricing .pricing-card .card-item .card-content .btn-social, .pricing .pricing-card .card-item .card-content .send-message {
+	 color: #fff;
+	 background-color: #0984e3;
+	 text-transform: uppercase;
+	 padding: 10px;
+	 margin: 20px auto;
+	 width: 200px;
+	 display: inline-block;
+	 text-decoration: none;
+	 border-radius: 40px;
+	 -webkit-transition: all 300ms;
+	 -o-transition: all 300ms;
+	 transition: all 300ms;
+}
+ .pricing .pricing-card .card-item .card-content .btn-get-started:hover, .pricing .pricing-card .card-item .card-content .btn-social:hover, .pricing .pricing-card .card-item .card-content .send-message:hover {
+	 -webkit-box-shadow: 3px 4px 20px 0 rgba(0, 0, 0, 0.15);
+	 box-shadow: 3px 4px 20px 0 rgba(0, 0, 0, 0.15);
+	 color: #0984e3;
+	 background-color: #fff;
+	 -webkit-transition: all 300ms;
+	 -o-transition: all 300ms;
+	 transition: all 300ms;
+}
+ .pricing .pricing-card .card-item .card-content:hover {
+	 -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	 box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	 -webkit-transition: all 300ms;
+	 -o-transition: all 300ms;
+	 transition: all 300ms;
+}
+ .pricing .pricing-card #popular {
+	 position: relative;
+	 top: -20px;
+}
+ .pricing .pricing-card #popular .lable-popular {
+	 display: inline-block;
+	 margin: 10px 0px;
+	 padding: 5px 20px;
+	 width: 150px;
+	 color: #fff;
+	 background-color: #0984e3;
+	 position: absolute;
+	 top: -25px;
+	 left: 50%;
+	 -webkit-transform: translateX(-50%);
+	 -ms-transform: translateX(-50%);
+	 transform: translateX(-50%);
+}
+ .pricing .pricing-card #popular .type-price {
+	 padding-top: 40px;
+}
+/* End Pricing */
+ 
