@@ -1,245 +1,1961 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 
-  <head>
-	  <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<title>UMS HUSC ANALYST</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-		<!-- Fonts -->
-   	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-		
-		<!-- Sal css -->
-		<link rel="stylesheet" type="text/css" href="css/sal.css"/>
-		
-		<!-- Carousel -->
-		
-		
-		<!-- Custom CSS   -->
-		<link rel="stylesheet" href="css/app.css">
-	</head>
-	
-  <body>
-  	
-  	<section class="container-fluid banner">
-  		<div class="row pt-5">
-  			<div class="col-sm-6 app-basic-info">
-  				<div class="main-info">
-  					<div class="app-name my-4">
-							<h2>UMS HUSC ANALYST</h2>
-						</div>
-						<div class="app-descripton">
-							<h6>Tiện ích giúp các bạn đang học tại trường ĐHKH Huế, ĐHNN Huế theo dõi, quản lý điểm học tập dễ dàng hơn. Giao diện bắt mắt hơn</h6>
-						</div>
-						<div class="install my-4">
-							<a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi" target="_blank" class="btn btn-app btn-install text-uppercase"><i class="fa fa-download mx-2"></i> CÀI ĐẶT</a>
-						</div>
-  				</div>
-  			</div>
-  			<div class="col-sm-6">
-  				<img src="images/app/banner_app.png" alt="" class="img-fluid">
-  			</div>
-  		</div>
-  	</section>
-  	
-  	<section class="produce container my-4">
-  		<div class="row">
-  			<div class="col-sm-6 offset-sm-3 text-center">
-					<p>DỄ DÀNG SỬ DỤNG CHO MỌI NGƯỜI</p>
-					<h4>HOÀN TOÀN MIỄN PHÍ</h4>
-					<p class="mt-3">Tích hợp tốt cho trình duyệt Chrome 78 trở lên trên laptop, PC. Dung lượng nhẹ, được nâng cấp, tối ưu thường xuyên</p>
-					<div class="download-now my-2">
-						<a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi" target="_blank" class="btn-download-now">TẢI XUỐNG NGAY!!!</a>
-					</div>
-				</div>
-  		</div>
-  	</section>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMS HUSC ANALYST - Tiện ích quản lý điểm học tập</title>
+  <meta name="description"
+    content="Tiện ích Chrome giúp sinh viên ĐHKH Huế, ĐHNN Huế theo dõi và quản lý điểm học tập một cách dễ dàng">
 
-  	<section class="container feature owl-carousel my-5">
-  		<h4 class="my-5 text-center">TÍNH NĂNG CỦA TIỆN ÍCH</h4>
-  		<div id="crsFeature" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="row">
-							<div class="col-sm-6 image-feature text-center pt-5">
-								<img src="images/app/modal.PNG" alt="analyst" class="img-fluid img-screen">
-							</div>
-							<div class="col-sm-6 info-feature pt-5">
-								<div class="border-line"></div>
-								<img class="shape1" src="images/app/shape1.png" alt="shape1">
-								<img class="shape2" src="images/app/shape2.png" alt="shape2">
-								<img class="shape3" src="images/app/shape1.png" alt="shape3">
-								<div class="feature-text pl-5">
-									<h5 class="feature-name analyst">THỐNG KÊ</h5>
-									<p>Thống kê và hiển thị biểu đồ điểm hệ 10 theo:</p>
-									<p><i class="far fa-chart-bar mx-2"></i>Học kỳ</p>
-									<p><i class="far fa-chart-bar mx-2"></i>Năm học</p>
-									<p>Tính năng này sẽ giúp các bạn có thể xem nhanh điểm của từng học kỳ, từng năm ngay trên giao diện của trang "Lịch sử quá trình học tập" bằng cách nhấn vào nút <span class="text-uppercase text-primary">thống kê</span></p>
-									<p>Bạn cũng có thể bật tắt tính năng này tại popup của extension</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="col-sm-6 image-feature text-center pt-5">
-								<img src="images/app/feature_mark.png" alt="analyst" class="img-fluid img-screen">
-							</div>
-							<div class="col-sm-6 info-feature pt-5">
-								<div class="border-line"></div>
-								<img class="shape1" src="images/app/shape1.png" alt="shape1">
-								<img class="shape2" src="images/app/shape2.png" alt="shape2">
-								<img class="shape3" src="images/app/shape1.png" alt="shape3">
-								<div class="feature-text pl-5">
-									<h5 class="feature-name analyst">XEM ĐIỂM QTHT - TÍNH ĐIỂM THI CẦN ĐẠT</h5>
-									<p>Với tính năng này, bạn có thể xem ngay điểm thành phần của từng học phần ngay tại trang "Lịch sử quá trình học tập" mà không cần phải đi đến trang chi tiết học phần. Chúng tôi đã thiết kế 1 icon <i class="fa fa-question-circle text-primary"></i> ngay cạnh tên mỗi học phần để các bạn có thể xem nhanh điểm của mình</p>
-									<p>Ngoài ra, với mỗi học phần đã có điểm thành phần, ứng dụng sẽ tự động tính số điểm thi bạn cần đạt được để có thể có điểm tổng kết tương ứng với xếp loại A,B,C,D</p>
-									<p>Bạn cũng có thể bật tắt tính năng này tại popup của extension</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="col-sm-6 image-feature text-center pt-5">
-								<img src="images/app/dashboard.PNG" alt="analyst" class="img-fluid img-screen">
-							</div>
-							<div class="col-sm-6 info-feature pt-5">
-								<div class="border-line"></div>
-								<img class="shape1" src="images/app/shape1.png" alt="shape1">
-								<img class="shape2" src="images/app/shape2.png" alt="shape2">
-								<img class="shape3" src="images/app/shape1.png" alt="shape3">
-								<div class="feature-text pl-5">
-									<h5 class="feature-name analyst">ĐÁNH GIÁ XẾP LOẠI - THỐNG KÊ TÍN CHỈ</h5>
-									<p>Với tính năng này, bạn có thể xem tổng điểm hệ 4, xếp loại học lực, số học phần đạt tín chỉ loại A,B,C,D ngay tại trang "Lịch sử quá trình học tập". Điều này sẽ giúp các bạn có thể có cái nhìn tổng quan nhanh về kết quả học tập của mình. </p>
-									<p>Bạn cũng có thể bật tắt tính năng này tại popup của extension</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-							<div class="col-sm-6 image-feature text-center pt-5">
-								<img src="images/app/message.png" alt="analyst" class="img-fluid img-screen">
-							</div>
-							<div class="col-sm-6 info-feature pt-5">
-								<div class="border-line"></div>
-								<img class="shape1" src="images/app/shape1.png" alt="shape1">
-								<img class="shape2" src="images/app/shape2.png" alt="shape2">
-								<img class="shape3" src="images/app/shape1.png" alt="shape3">
-								<div class="feature-text pl-5">
-									<h5 class="feature-name analyst">THÔNG BÁO KHI CÓ TIN NHẮN MỚI</h5>
-									<p>Bạn sẽ có thể tự do làm mọi công việc khác (nghe nhạc, xem phim, lập trình,...) mà vẫn sẽ nhận được thông báo khi có tin nhắn mới. Tính năng này hoạt động tương tự như messenger của facebook. Chỉ cần bạn có đăng nhập và còn mở trang tín chỉ, thông báo sẽ xuất hiện trên màn hình </p>
-									<p>Bạn có thể tắt thông báo bằng cách tắt thông báo trên trình duyệt. Tuy nhiên, chúng tôi khuyến khích các bạn không nên tắt phần thông báo</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<a class="carousel-control-prev" href="#crsFeature" role="button" data-slide="prev">
-					<span class="carousel-control-prev-icon"></span>
-				</a>
-				<a class="carousel-control-next" href="#crsFeature" role="button" data-slide="next">
-					<span class="carousel-control-next-icon"></span>
-				</a>
-			</div>
-  	</section>
-  	
-  	<section class="container another-feature my-4 text-center">
-  		<div class="row">
-  			<div class="col-sm-8 offset-sm-2">
-  				<p>Ngoài ra, giao diện cũng sẽ được thay đổi font chữ,... và một số thay đổi khác nhằm giúp giao diện trở nên trực quan hơn.</p>
-  				<div class="download-now my-2">
-						<a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi" class="btn-download-now" target="_blank">TẢI XUỐNG NGAY!!!</a>
-					</div>
-  			</div>
-  		</div>
-  	</section>
-  	
-  	<section class="text-center count-download">
-  		<div class="container">
-  			Tải xuống để trải nghiệm tính năng hấp dẫn
-  		</div>
-  	</section>
-  	
-  	<section class="container donate pricing my-5">
-  		<h2 class="text-center my-3 text-uppercase">Ủng hộ tác giả</h2>
-  		<div class="row pricing-card">
-  			<!-- Start-up -->
-          <div class="card-item col-xs-8 offset-xs-2 col-sm-4 offset-sm-0">
-            <div class="card-content">
-              <p class="type-price">Vietinbank</p>
-              <p class="type-des">1040 0140 4092</p>
-              <div class="detail">
-                <p>Tên chủ TK: NGÔ HOÀNG ĐỨC PHÚC</p>
-                <p>Chi nhánh: THỪA THIÊN HUẾ</p>
+  <!-- Modern Fonts - Be Vietnam Pro for Vietnamese language -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #0f1a1f;
+      --bg-card-hover: #152a30;
+      --accent-primary: #00d4aa;
+      --accent-secondary: #00b894;
+      --accent-glow: rgba(0, 212, 170, 0.3);
+      --text-primary: #f0f0f5;
+      --text-secondary: #a0a0b0;
+      --text-muted: #6a6a7a;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --gradient-accent: linear-gradient(135deg, #00d4aa 0%, #00b894 50%, #00a885 100%);
+      --gradient-bg: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 70%);
+      --font-primary: 'Be Vietnam Pro', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-glow: 0 0 60px var(--accent-glow);
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background: var(--gradient-bg);
+    }
+
+    .bg-pattern::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(0, 212, 170, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 184, 148, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 168, 133, 0.03) 0%, transparent 40%);
+      animation: bgFloat 20s ease-in-out infinite;
+    }
+
+    @keyframes bgFloat {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      33% {
+        transform: translate(30px, -30px) rotate(1deg);
+      }
+
+      66% {
+        transform: translate(-20px, 20px) rotate(-1deg);
+      }
+    }
+
+    /* Grid Lines */
+    .grid-lines {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      background: rgba(10, 10, 15, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition-smooth);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-accent);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--bg-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-cta {
+      background: var(--gradient-accent);
+      color: var(--bg-primary);
+      padding: 10px 24px;
+      border-radius: var(--radius-xl);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 212, 170, 0.1);
+      border: 1px solid rgba(0, 212, 170, 0.3);
+      padding: 8px 16px;
+      border-radius: var(--radius-xl);
+      font-size: 0.85rem;
+      color: var(--accent-primary);
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .highlight-text {
+      color: var(--accent-primary);
+      font-weight: 500;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient-accent);
+      color: var(--bg-primary);
+      padding: 16px 32px;
+      border-radius: var(--radius-xl);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: var(--transition-fast);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 16px 32px;
+      border-radius: var(--radius-xl);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid var(--border-color);
+      transition: var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card);
+      border-color: var(--accent-primary);
+    }
+
+    .hero-image {
+      position: relative;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 212, 170, 0.1),
+        inset 0 0 60px rgba(0, 212, 170, 0.03);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Glow effect behind image */
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 90%;
+      background: radial-gradient(ellipse at center, rgba(0, 212, 170, 0.15) 0%, transparent 70%);
+      filter: blur(40px);
+      z-index: 0;
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    /* Top-right gradient orb */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0, 212, 170, 0.4) 0%, rgba(0, 184, 148, 0.1) 40%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(20px);
+      z-index: 1;
+      animation: floatOrb1 6s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+    }
+
+    @keyframes floatOrb1 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(-10px, 15px);
+      }
+    }
+
+    @keyframes floatOrb2 {
+
+      0%,
+      100% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(15px, -10px) rotate(180deg);
+      }
+    }
+
+    @keyframes floatOrb3 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      33% {
+        transform: translate(8px, 12px);
+      }
+
+      66% {
+        transform: translate(-5px, 8px);
+      }
+    }
+
+    /* Decorative elements container */
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    /* Floating gradient orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-orb-1 {
+      width: 120px;
+      height: 120px;
+      bottom: -10%;
+      left: -8%;
+      background: radial-gradient(circle, rgba(0, 184, 148, 0.35) 0%, transparent 70%);
+      filter: blur(15px);
+      animation: floatOrb2 8s ease-in-out infinite;
+    }
+
+    .hero-orb-2 {
+      width: 80px;
+      height: 80px;
+      top: 20%;
+      right: -5%;
+      background: radial-gradient(circle, rgba(0, 212, 170, 0.5) 0%, transparent 70%);
+      filter: blur(10px);
+      animation: floatOrb3 5s ease-in-out infinite;
+    }
+
+    .hero-orb-3 {
+      width: 60px;
+      height: 60px;
+      bottom: 30%;
+      left: -12%;
+      background: radial-gradient(circle, rgba(0, 168, 133, 0.4) 0%, transparent 70%);
+      filter: blur(8px);
+      animation: floatOrb1 7s ease-in-out infinite reverse;
+    }
+
+    /* Decorative rings */
+    .hero-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-ring-1 {
+      width: 300px;
+      height: 300px;
+      top: -20%;
+      right: -15%;
+      animation: spinSlow 20s linear infinite;
+    }
+
+    .hero-ring-2 {
+      width: 200px;
+      height: 200px;
+      bottom: -10%;
+      left: -10%;
+      border-style: dashed;
+      animation: spinSlow 15s linear infinite reverse;
+    }
+
+    @keyframes spinSlow {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Floating dots */
+    .hero-dots {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      z-index: 3;
+      opacity: 0.6;
+    }
+
+    .hero-dots-1 {
+      top: 10%;
+      right: 5%;
+      animation: floatOrb3 4s ease-in-out infinite;
+    }
+
+    .hero-dots-2 {
+      bottom: 15%;
+      right: 10%;
+      width: 4px;
+      height: 4px;
+      animation: floatOrb2 5s ease-in-out infinite;
+    }
+
+    .hero-dots-3 {
+      top: 40%;
+      left: -5%;
+      width: 5px;
+      height: 5px;
+      animation: floatOrb1 6s ease-in-out infinite;
+    }
+
+    /* Corner accents */
+    .hero-corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .hero-corner-tl {
+      top: -8px;
+      left: -8px;
+      border-top: 2px solid var(--accent-primary);
+      border-left: 2px solid var(--accent-primary);
+      border-radius: 8px 0 0 0;
+    }
+
+    .hero-corner-br {
+      bottom: -8px;
+      right: -8px;
+      border-bottom: 2px solid var(--accent-primary);
+      border-right: 2px solid var(--accent-primary);
+      border-radius: 0 0 8px 0;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .stat-item:nth-child(1),
+    .stat-item:nth-child(2),
+    .stat-item:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    .stat-item:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .stat-item:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    .stat-item {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.6) 0%, rgba(10, 25, 30, 0.4) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-md);
+      transition: var(--transition-fast);
+    }
+
+    .stat-item:hover {
+      border-color: rgba(0, 212, 170, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 212, 170, 0.1);
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(0, 184, 148, 0.1) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .stat-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .stat-info {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      font-family: var(--font-mono);
+      line-height: 1.2;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 120px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-primary);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.95) 0%, rgba(10, 25, 30, 0.9) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0, 212, 170, 0.05);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gradient-accent);
+      transform: scaleX(0);
+      transition: var(--transition-smooth);
+    }
+
+    .feature-card:hover {
+      background: linear-gradient(145deg, rgba(20, 45, 50, 0.95) 0%, rgba(15, 35, 40, 0.9) 100%);
+      transform: translateY(-8px);
+      border-color: rgba(0, 212, 170, 0.4);
+      box-shadow: 0 8px 32px rgba(0, 212, 170, 0.15), inset 0 1px 0 rgba(0, 212, 170, 0.1);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(0, 184, 148, 0.1) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent-primary);
+      transition: var(--transition-fast);
+    }
+
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke-width: 1.5;
+    }
+
+    .feature-card:hover .feature-icon {
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.25) 0%, rgba(0, 184, 148, 0.15) 100%);
+      border-color: rgba(0, 212, 170, 0.4);
+      transform: scale(1.05);
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    /* Showcase Section */
+    .showcase {
+      padding: 120px 0;
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .showcase::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(0, 184, 148, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 170, 0.03) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .showcase-item {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 40px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.4) 0%, rgba(10, 25, 30, 0.2) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.1);
+      position: relative;
+    }
+
+    .showcase-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.05) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .showcase-item:hover::before {
+      opacity: 1;
+    }
+
+    .showcase-item:hover {
+      border-color: rgba(0, 212, 170, 0.25);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(0, 212, 170, 0.1);
+    }
+
+    .showcase-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .showcase-image {
+      position: relative;
+    }
+
+    .showcase-image::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background: radial-gradient(ellipse at center, rgba(0, 212, 170, 0.2) 0%, transparent 70%);
+      filter: blur(30px);
+      z-index: 0;
+      transition: all 0.4s ease;
+    }
+
+    .showcase-item:hover .showcase-image::before {
+      width: 90%;
+      height: 90%;
+      opacity: 1.2;
+    }
+
+    .showcase-image img {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 212, 170, 0.15),
+        inset 0 0 30px rgba(0, 212, 170, 0.03);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      position: relative;
+      z-index: 1;
+      transition: all 0.4s ease;
+    }
+
+    .showcase-item:hover .showcase-image img {
+      transform: scale(1.02);
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 212, 170, 0.3),
+        0 0 40px rgba(0, 212, 170, 0.15);
+    }
+
+    .showcase-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .showcase-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+      border-radius: 50%;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--bg-primary);
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0, 212, 170, 0.3);
+    }
+
+    .showcase-content h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .showcase-content p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .showcase-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .showcase-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--text-secondary);
+      padding: 12px 16px;
+      background: rgba(0, 212, 170, 0.05);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--accent-primary);
+      transition: all 0.3s ease;
+    }
+
+    .showcase-list li:hover {
+      background: rgba(0, 212, 170, 0.1);
+      transform: translateX(5px);
+    }
+
+    .showcase-list li .list-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    /* Showcase items spacing */
+    .showcase-item+.showcase-item {
+      margin-top: 40px;
+    }
+
+    /* Showcase reverse layout */
+    .showcase-item.reverse .showcase-grid {
+      direction: rtl;
+    }
+
+    .showcase-item.reverse .showcase-grid>* {
+      direction: ltr;
+    }
+
+    /* Staggered animation for list items */
+    .showcase-list li {
+      opacity: 0;
+      transform: translateX(-10px);
+      animation: slideIn 0.4s ease forwards;
+    }
+
+    .showcase-item.visible .showcase-list li:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .showcase-item.visible .showcase-list li:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .showcase-item.visible .showcase-list li:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* CTA Section */
+    .cta {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .cta-box {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.95) 0%, rgba(10, 28, 32, 0.9) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-xl);
+      padding: 64px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(0, 212, 170, 0.08);
+    }
+
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 50%);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .cta h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .cta p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    /* FAQ Section */
+    .faq {
+      padding: 120px 0;
+      background: var(--bg-secondary);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 800px;
+      margin: 48px auto 0;
+    }
+
+    .faq-item {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.95) 0%, rgba(10, 25, 30, 0.9) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 212, 170, 0.05);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(0, 212, 170, 0.35);
+      box-shadow: 0 4px 24px rgba(0, 212, 170, 0.1), inset 0 1px 0 rgba(0, 212, 170, 0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px 28px;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-family: var(--font-primary);
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: var(--transition-fast);
+    }
+
+    .faq-question:hover {
+      color: var(--accent-primary);
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(0, 212, 170, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+      transition: var(--transition-fast);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+      background: var(--accent-primary);
+      color: var(--bg-primary);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+
+    .faq-answer-content {
+      padding: 0 28px 24px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .faq-answer-content a {
+      color: var(--accent-primary);
+      text-decoration: none;
+    }
+
+    .faq-answer-content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Install Steps */
+    .install-steps {
+      display: flex;
+      gap: 24px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .install-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--bg-primary);
+      flex-shrink: 0;
+    }
+
+    /* Footer */
+    footer {
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-donate {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.95) 0%, rgba(10, 28, 32, 0.9) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(0, 212, 170, 0.08);
+    }
+
+    .footer-donate h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .footer-donate .bank-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 4px;
+    }
+
+    .footer-donate .account-number {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .footer-donate .account-holder {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-brand h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand p {
+      color: var(--text-secondary);
+      max-width: 300px;
+    }
+
+    .footer-links h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .footer-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-bottom .heart {
+      color: #ff6b6b;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+      }
+
+      .stat-item:nth-child(1),
+      .stat-item:nth-child(2) {
+        grid-column: span 3;
+      }
+
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4),
+      .stat-item:nth-child(5) {
+        grid-column: span 2;
+      }
+
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .showcase-item {
+        padding: 24px;
+      }
+
+      .showcase-item.reverse .showcase-grid {
+        direction: ltr;
+      }
+
+      .showcase-content {
+        text-align: center;
+      }
+
+      .showcase-list li {
+        justify-content: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        margin: 0 auto;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .hero {
+        padding: 100px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .stat-item:nth-child(1),
+      .stat-item:nth-child(2),
+      .stat-item:nth-child(3),
+      .stat-item:nth-child(4) {
+        grid-column: span 1;
+      }
+
+      .stat-item:nth-child(5) {
+        grid-column: 1 / -1;
+      }
+
+      .stat-item {
+        padding: 12px;
+        gap: 10px;
+      }
+
+      .stat-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .stat-icon svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .stat-value {
+        font-size: 1.1rem;
+      }
+
+      .stat-label {
+        font-size: 0.7rem;
+      }
+
+      .features,
+      .showcase,
+      .faq,
+      .cta {
+        padding: 80px 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-links {
+        text-align: center;
+      }
+
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-links a {
+        justify-content: center;
+      }
+
+      .footer-donate {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .cta-box {
+        padding: 40px 24px;
+      }
+    }
+
+    /* Animations on scroll */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Smooth appearance for staggered items */
+    .stagger-1 {
+      transition-delay: 0.1s;
+    }
+
+    .stagger-2 {
+      transition-delay: 0.2s;
+    }
+
+    .stagger-3 {
+      transition-delay: 0.3s;
+    }
+
+    .stagger-4 {
+      transition-delay: 0.4s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-pattern"></div>
+  <div class="grid-lines"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-icon">U</span>
+        UMS HUSC
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Tính năng</a></li>
+        <li><a href="#showcase">Chi tiết</a></li>
+        <li><a href="#faq">Hỏi đáp</a></li>
+      </ul>
+      <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+        target="_blank" class="nav-cta">Cài đặt ngay</a>
+      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Miễn phí hoàn toàn
+          </div>
+          <h1>UMS HUSC ANALYST</h1>
+          <p>Tiện ích Chrome giúp sinh viên <span class="highlight-text">Đại học Khoa học - Đại học Huế</span> & <span
+              class="highlight-text">Đại học Ngoại ngữ - Đại học Huế</span> theo dõi, quản lý điểm học tập một cách trực
+            quan và hiệu quả hơn.</p>
+          <div class="hero-buttons">
+            <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+              target="_blank" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+              Cài đặt miễn phí
+            </a>
+            <a href="#features" class="btn-secondary">
+              Xem tính năng
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-icon"><i data-lucide="users"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">480+</div>
+                <div class="stat-label">Người dùng hàng tuần</div>
               </div>
-              <a href="#" class="btn-get-started">CÁM ƠN !!!</a>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i data-lucide="download"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">1400+</div>
+                <div class="stat-label">Lượt cài đặt từ 2020</div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i data-lucide="star"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">4.96</div>
+                <div class="stat-label">Đánh giá trên Chrome Store</div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i data-lucide="gift"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Miễn phí sử dụng</div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-icon"><i data-lucide="chrome"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">Chrome 78+</div>
+                <div class="stat-label">Tương thích</div>
+              </div>
             </div>
           </div>
-          <!-- Prenium -->
-          <div class="card-item col-xs-8 offset-xs-2 col-sm-4 offset-sm-0">
-            <div class="card-content" id="popular">
-              <div class="lable-popular">YÊU THÍCH</div>
-              <p class="type-price">Vietcombank</p>
-              <p class="type-des">0161 001 735 770</p>
-              <div class="detail">
-                <p>Tên chủ TK: NGÔ HOÀNG ĐỨC PHÚC</p>
-                <p>Chi nhánh: THỪA THIÊN HUẾ</p>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image">
+            <!-- Floating orbs -->
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+
+            <!-- Decorative rings -->
+            <div class="hero-ring hero-ring-1"></div>
+            <div class="hero-ring hero-ring-2"></div>
+
+            <!-- Floating dots -->
+            <div class="hero-dots hero-dots-1"></div>
+            <div class="hero-dots hero-dots-2"></div>
+            <div class="hero-dots hero-dots-3"></div>
+
+            <!-- Corner accents -->
+            <div class="hero-corner hero-corner-tl"></div>
+            <div class="hero-corner hero-corner-br"></div>
+
+            <img src="images/app/banner_app.png" alt="UMS HUSC Analyst Preview">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tính năng</span>
+        <h2 class="section-title">Mọi thứ bạn cần để quản lý điểm</h2>
+        <p class="section-desc">Tiện ích được thiết kế để giúp việc theo dõi kết quả học tập trở nên đơn giản và trực
+          quan hơn.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card animate-on-scroll stagger-1">
+          <div class="feature-icon">
+            <i data-lucide="bar-chart-3"></i>
+          </div>
+          <h3>Thống kê biểu đồ</h3>
+          <p>Xem biểu đồ điểm hệ 10 theo học kỳ và năm học ngay trên trang "Lịch sử quá trình học tập".</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-2">
+          <div class="feature-icon">
+            <i data-lucide="target"></i>
+          </div>
+          <h3>Tính điểm cần đạt</h3>
+          <p>Tự động tính số điểm thi bạn cần để đạt được xếp loại A, B, C, D mong muốn.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-3">
+          <div class="feature-icon">
+            <i data-lucide="eye"></i>
+          </div>
+          <h3>Xem điểm nhanh</h3>
+          <p>Xem điểm thành phần của từng học phần ngay tại trang chính mà không cần chuyển trang.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-4">
+          <div class="feature-icon">
+            <i data-lucide="file-spreadsheet"></i>
+          </div>
+          <h3>Xuất bảng điểm QTHT</h3>
+          <p>Xuất bảng điểm QTHT và KQHT với chỉ 1 click, xuất định dạng excel.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-1">
+          <div class="feature-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <h3>Đánh giá xếp loại</h3>
+          <p>Xem tổng điểm hệ 4, xếp loại học lực và thống kê tín chỉ đạt loại A, B, C, D.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-2">
+          <div class="feature-icon">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <h3>Giao diện hiện đại</h3>
+          <p>Font chữ đẹp mắt và giao diện được tối ưu để trực quan hơn so với mặc định.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Section -->
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Chi tiết</span>
+        <h2 class="section-title">Trải nghiệm trực quan</h2>
+        <p class="section-desc">Khám phá các tính năng nổi bật giúp việc quản lý điểm trở nên dễ dàng hơn bao giờ hết.
+        </p>
+      </div>
+
+      <div class="showcase-item animate-on-scroll">
+        <div class="showcase-grid">
+          <div class="showcase-image">
+            <img src="images/app/modal.PNG" alt="Thống kê điểm">
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-number">1</div>
+            <h3>Thống kê điểm trực quan</h3>
+            <p>Xem tổng quan kết quả học tập của bạn thông qua biểu đồ đẹp mắt và dễ hiểu.</p>
+            <ul class="showcase-list">
+              <li><i data-lucide="bar-chart-2" class="list-icon"></i> Biểu đồ điểm theo từng học kỳ</li>
+              <li><i data-lucide="trending-up" class="list-icon"></i> Biểu đồ điểm theo năm học</li>
+              <li><i data-lucide="toggle-right" class="list-icon"></i> Bật tắt tính năng linh hoạt qua popup</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-item animate-on-scroll reverse">
+        <div class="showcase-grid">
+          <div class="showcase-image">
+            <img src="images/app/feature_mark.png" alt="Xem điểm QTHT">
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-number">2</div>
+            <h3>Xem điểm & Tính điểm cần đạt</h3>
+            <p>Không cần phải chuyển trang, mọi thông tin điểm đều hiển thị ngay tại chỗ.</p>
+            <ul class="showcase-list">
+              <li><i data-lucide="eye" class="list-icon"></i> Icon xem nhanh điểm thành phần bên cạnh mỗi học phần</li>
+              <li><i data-lucide="calculator" class="list-icon"></i> Tự động tính điểm thi cần đạt cho xếp loại A, B, C,
+                D</li>
+              <li><i data-lucide="clock" class="list-icon"></i> Tiết kiệm thời gian tra cứu thông tin</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-item animate-on-scroll">
+        <div class="showcase-grid">
+          <div class="showcase-image">
+            <img src="images/app/dashboard.PNG" alt="Dashboard">
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-number">3</div>
+            <h3>Dashboard tổng quan</h3>
+            <p>Có cái nhìn toàn diện về kết quả học tập của bạn chỉ trong một màn hình.</p>
+            <ul class="showcase-list">
+              <li><i data-lucide="hash" class="list-icon"></i> Tổng điểm trung bình hệ 4</li>
+              <li><i data-lucide="award" class="list-icon"></i> Xếp loại học lực tổng kết</li>
+              <li><i data-lucide="pie-chart" class="list-icon"></i> Thống kê số học phần đạt từng loại A, B, C, D</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Sẵn sàng trải nghiệm?</h2>
+        <p>Tải xuống và cài đặt ngay hôm nay để khám phá các tính năng hấp dẫn. Hoàn toàn miễn phí!</p>
+        <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+          target="_blank" class="btn-primary" style="position: relative;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+          </svg>
+          Cài đặt miễn phí
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hỏi đáp</span>
+        <h2 class="section-title">Câu hỏi thường gặp</h2>
+        <p class="section-desc">Những thắc mắc phổ biến về tiện ích UMS HUSC Analyst được giải đáp tại đây.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item animate-on-scroll stagger-1">
+          <button class="faq-question">
+            Làm thế nào để cài đặt tiện ích?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Việc cài đặt rất đơn giản, chỉ cần 3 bước:
+              <div class="install-steps">
+                <div class="install-step">
+                  <span class="step-number">1</span>
+                  <span>Truy cập Chrome Web Store</span>
+                </div>
+                <div class="install-step">
+                  <span class="step-number">2</span>
+                  <span>Nhấn "Thêm vào Chrome"</span>
+                </div>
+                <div class="install-step">
+                  <span class="step-number">3</span>
+                  <span>Xác nhận cài đặt</span>
+                </div>
               </div>
-              <a href="#" class="btn-get-started">CÁM ƠN !!!</a>
             </div>
           </div>
-          <!-- Pro -->
-          <div class="card-item col-xs-8 offset-xs-2 col-sm-4 offset-sm-0">
-            <div class="card-content">
-              <p class="type-price">Viettel Pay</p>
-              <p class="type-des">9704 2292 5766 6698</p>
-              <div class="detail">
-                <p>Tên chủ TK: NGÔ HOÀNG ĐỨC PHÚC</p>
-                <p>Chi nhánh: QUÂN ĐỘI - HỘI SỞ CHÍNH</p>
-              </div>
-              <a href="#" class="btn-get-started">CÁM ƠN !!!</a>
+        </div>
+        <div class="faq-item animate-on-scroll stagger-2">
+          <button class="faq-question">
+            Tiện ích có miễn phí không?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Hoàn toàn miễn phí! Bạn có thể sử dụng tất cả các tính năng mà không cần trả bất kỳ chi phí nào. Tiện ích
+              được phát triển với mục đích hỗ trợ sinh viên trong việc theo dõi kết quả học tập.
             </div>
           </div>
-  		</div>
-  	</section>
-  	
-  	<footer class="footer container mt-5 text-center">
-  		<div class="row">
-				<div class="col-sm-4">
-					<p>&copy; Bản quyền thuộc về ducphuc-dev</p>
-					<p>Make with <i class="fa fa-heart text-danger"></i> by ducphuc-dev</p>
-				</div>
-				<div class="col-sm-4">
-					<p>Liên hệ với tác giả: </p>
-					<ul>
-						<li><i class="fa fa-phone"></i> 0329 3 22 111</li>
-						<li><i class="fa fa-envelope"></i> ducphucit1202@gmail.com</li>
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<p>Cài đặt ngay để trải nghiệm tiện ích </p>
-					<div class="download-now my-2">
-						<a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi" target="_blank" class="btn-download-now">CÀI ĐẶT</a>
-					</div>
-				</div>
-  		</div>
-  	</footer>
-  	
-  	<!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-		
-		<!-- Sal JS -->
-		<script src="js/sal.js"></script>
-		
-		<!-- Smoot scroll -->
-		<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-		
-	</body>
+        </div>
+        <div class="faq-item animate-on-scroll stagger-3">
+          <button class="faq-question">
+            Tiện ích hoạt động trên trình duyệt nào?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Tiện ích được phát triển cho trình duyệt <strong>Google Chrome</strong> phiên bản 78 trở lên. Ngoài ra,
+              bạn cũng có thể sử dụng trên các trình duyệt dựa trên Chromium như Microsoft Edge, Brave, Opera,...
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll stagger-4">
+          <button class="faq-question">
+            Dữ liệu của tôi có được bảo mật không?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Tiện ích hoạt động hoàn toàn trên trình duyệt của bạn và <strong>không thu thập hay gửi dữ liệu cá
+                nhân</strong> đến bất kỳ máy chủ bên ngoài nào. Tất cả thông tin điểm số chỉ được xử lý cục bộ trên
+              thiết bị của bạn.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll stagger-1">
+          <button class="faq-question">
+            Tôi gặp lỗi khi sử dụng, phải làm sao?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Nếu gặp bất kỳ vấn đề nào, bạn có thể liên hệ trực tiếp với tác giả qua email <a
+                href="mailto:ducphucit1202@gmail.com">ducphucit1202@gmail.com</a> hoặc số điện thoại <a
+                href="tel:03293221111">0329 3 22 111</a>. Mình sẽ hỗ trợ bạn sớm nhất có thể!
+            </div>
+          </div>
+        </div>
+        <div class="faq-item animate-on-scroll stagger-2">
+          <button class="faq-question">
+            Tiện ích có được cập nhật thường xuyên không?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Có! Tiện ích được duy trì và cập nhật thường xuyên để đảm bảo tương thích với các thay đổi của trang tín
+              chỉ, cũng như bổ sung các tính năng mới theo phản hồi của người dùng.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;">U</span>
+            UMS HUSC Analyst
+          </h3>
+          <p>Tiện ích quản lý điểm học tập dành cho sinh viên ĐHKH Huế và ĐHNN Huế.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liên kết</h4>
+          <ul>
+            <li><a href="#features">Tính năng</a></li>
+            <li><a href="#showcase">Chi tiết</a></li>
+            <li><a href="#faq">Hỏi đáp</a></li>
+            <li><a
+                href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+                target="_blank">Chrome Web Store</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Liên hệ</h4>
+          <ul>
+            <li><a href="tel:03293221111"><i data-lucide="phone" class="footer-icon"></i> 0329 3 22 111</a></li>
+            <li><a href="mailto:ducphucit1202@gmail.com"><i data-lucide="mail" class="footer-icon"></i>
+                ducphucit1202@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="footer-donate">
+          <h4>Ủng hộ tác giả</h4>
+          <div class="bank-name">Vietcombank</div>
+          <div class="account-number">0161 001 735 700</div>
+          <div class="account-holder">NGÔ HOÀNG ĐỨC PHÚC</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2020-2026 ducphuc-dev. Bản quyền thuộc về tác giả.</p>
+        <p>Made with <span class="heart">❤️</span> by ducphuc-dev</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Nav background on scroll
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10, 10, 15, 0.95)';
+      } else {
+        nav.style.background = 'rgba(10, 10, 15, 0.8)';
+      }
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+
+        // Close all FAQ items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Open clicked item if it wasn't already open
+        if (!isActive) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+
+    // Initialize Lucide icons
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
