@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hướng dẫn sử dụng - UMS HUSC ANALYST</title>
+  <meta name="description" content="Hướng dẫn chi tiết cách sử dụng các tính năng của UMS HUSC Analyst">
+
+  <!-- Modern Fonts - Be Vietnam Pro for Vietnamese language -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #0f1a1f;
+      --bg-card-hover: #152a30;
+      --accent-primary: #00d4aa;
+      --accent-secondary: #00b894;
+      --accent-glow: rgba(0, 212, 170, 0.3);
+      --text-primary: #f0f0f5;
+      --text-secondary: #a0a0b0;
+      --text-muted: #6a6a7a;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --gradient-accent: linear-gradient(135deg, #00d4aa 0%, #00b894 50%, #00a885 100%);
+      --gradient-bg: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 70%);
+      --font-primary: 'Be Vietnam Pro', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-glow: 0 0 60px var(--accent-glow);
+      --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background: var(--gradient-bg);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container-narrow {
+      max-width: 900px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 16px 0;
+      background: rgba(10, 10, 15, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    nav .container {
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-cta {
+      background: var(--gradient-accent);
+      color: var(--bg-primary);
+      padding: 8px 20px;
+      border-radius: var(--radius-xl);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: var(--transition-fast);
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .page-header {
+      padding: 140px 0 60px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-header p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Two Column Layout */
+    .guide-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .toc {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.95) 0%, rgba(10, 25, 30, 0.9) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toc h2 svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .toc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .toc-list li {
+      border-radius: var(--radius-sm);
+      transition: var(--transition-fast);
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .toc-list a:hover {
+      background: rgba(0, 212, 170, 0.08);
+      color: var(--text-primary);
+    }
+
+    .toc-list a.active {
+      background: rgba(0, 212, 170, 0.15);
+      border-color: rgba(0, 212, 170, 0.3);
+      color: var(--accent-primary);
+      font-weight: 500;
+    }
+
+    .toc-list a svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    /* Guide Content Area */
+    .guide-content-area {
+      min-height: 600px;
+    }
+
+    .guide-section {
+      display: none;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .guide-section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .guide-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .guide-icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(0, 184, 148, 0.1) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .guide-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .guide-title-group h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .guide-title-group p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .guide-content {
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.6) 0%, rgba(10, 25, 30, 0.4) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .guide-intro {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: var(--gradient-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--bg-primary);
+      flex-shrink: 0;
+    }
+
+    .step-content {
+      flex: 1;
+    }
+
+    .step-content h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .step-content p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .step-image {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 2px dashed rgba(0, 212, 170, 0.3);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .step-image img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius-md);
+    }
+
+    .step-image.placeholder {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--text-muted);
+    }
+
+    .step-image.placeholder svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.5;
+    }
+
+    .step-image.placeholder span {
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Dual images in one step */
+    .step-images-dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .step-images-dual .step-image {
+      min-height: 180px;
+    }
+
+    .tips-box {
+      background: rgba(0, 212, 170, 0.08);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+
+    .tips-box h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tips-box h4 svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .tips-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tips-box li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .tips-box li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+    }
+
+    .warning-box {
+      background: rgba(251, 191, 36, 0.08);
+      border: 1px solid rgba(251, 191, 36, 0.2);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+
+    .warning-box h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fbbf24;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .warning-box h4 svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .warning-box p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Icon inline style */
+    .icon-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(0, 212, 170, 0.15);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      color: var(--accent-primary);
+    }
+
+    .icon-inline svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .section-link {
+      background: rgba(0, 212, 170, 0.08);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-link svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .internal-link {
+      color: var(--accent-primary);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .internal-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 60px 0 40px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .footer-copyright {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-copyright .heart {
+      color: #ff6b6b;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-accent);
+      border: none;
+      border-radius: 50%;
+      color: var(--bg-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-fast);
+      z-index: 50;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .back-to-top svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .guide-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .page-header {
+        padding: 120px 0 40px;
+      }
+
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+
+      .guide-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+      }
+
+      .toc {
+        margin-bottom: 24px;
+      }
+
+      .toc-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .toc-list a {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .toc-list a svg {
+        display: none;
+      }
+
+      .guide-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .guide-content {
+        padding: 24px;
+      }
+
+      .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .step-images-dual {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .toc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-pattern"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="ums-husc-analyst.html" class="logo">
+        <img src="images/app/logo_64.png" alt="UMS HUSC Logo" class="logo-img">
+        UMS HUSC
+      </a>
+      <ul class="nav-links">
+        <li><a href="ums-husc-analyst.html">Trang chủ</a></li>
+        <li><a href="ums-husc-analyst.html#features">Tính năng</a></li>
+        <li><a href="ums-husc-analyst.html#faq">Hỏi đáp</a></li>
+        <li><a href="https://forms.gle/8Juic2wfTrFVVpBQ6" target="_blank">Góp ý</a></li>
+      </ul>
+      <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+        target="_blank" class="nav-cta">Cài đặt ngay</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Hướng dẫn sử dụng</h1>
+      <p>Tài liệu chi tiết giúp bạn sử dụng tất cả các tính năng của UMS HUSC Analyst một cách hiệu quả nhất.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="guide-layout">
+        <!-- Sidebar with TOC -->
+        <aside class="sidebar">
+          <div class="toc" id="toc">
+            <h2>
+              <i data-lucide="list"></i>
+              Mục lục
+            </h2>
+            <ul class="toc-list">
+              <li>
+                <a data-section="cai-dat" class="active">
+                  <i data-lucide="download"></i>
+                  Cài đặt Extension
+                </a>
+              </li>
+              <li>
+                <a data-section="cai-dat-tuy-chinh">
+                  <i data-lucide="settings"></i>
+                  Cài đặt & Tuỳ chỉnh
+                </a>
+              </li>
+              <li>
+                <a data-section="thong-ke">
+                  <i data-lucide="bar-chart-3"></i>
+                  Thống kê biểu đồ
+                </a>
+              </li>
+              <li>
+                <a data-section="xem-diem">
+                  <i data-lucide="eye"></i>
+                  Xem điểm nhanh
+                </a>
+              </li>
+              <li>
+                <a data-section="tinh-diem">
+                  <i data-lucide="target"></i>
+                  Tính điểm cần đạt
+                </a>
+              </li>
+              <li>
+                <a data-section="xuat-diem">
+                  <i data-lucide="file-down"></i>
+                  Xuất bảng điểm
+                </a>
+              </li>
+              <li>
+                <a data-section="quick-menu">
+                  <i data-lucide="pin"></i>
+                  Menu truy cập nhanh
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Guide Content Area -->
+        <div class="guide-content-area">
+          <!-- Section 1: Cài đặt Extension -->
+          <section class="guide-section active" id="cai-dat">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="download"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Cài đặt Extension</h2>
+                <p>Hướng dẫn cài đặt UMS HUSC Analyst trên trình duyệt Chrome</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                UMS HUSC Analyst là tiện ích miễn phí, được phát hành chính thức trên Chrome Web Store.
+                Việc cài đặt chỉ mất khoảng 30 giây.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Truy cập Chrome Web Store</h3>
+                    <p>
+                      Mở trình duyệt Chrome và truy cập
+                      <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc"
+                        target="_blank" style="color: var(--accent-primary);">trang extension trên Chrome Web Store</a>.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_install_step1.png" alt="Trang Chrome Web Store của extension">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Nhấn "Thêm vào Chrome"</h3>
+                    <p>
+                      Click vào nút "Thêm vào Chrome" (Add to Chrome) màu xanh ở góc phải của trang.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_install_step2.png" alt="Nút Thêm vào Chrome">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Xác nhận cài đặt</h3>
+                    <p>
+                      Một popup sẽ xuất hiện yêu cầu xác nhận. Nhấn "Thêm tiện ích" (Add extension) để hoàn tất.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_install_step3.png" alt="Popup xác nhận cài đặt">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Ghim Extension (tuỳ chọn)</h3>
+                    <p>
+                      Để truy cập nhanh, click vào icon Extensions (hình puzzle) trên thanh công cụ Chrome,
+                      sau đó nhấn icon ghim bên cạnh UMS HUSC Analyst.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_install_step4.png" alt="Ghim extension lên toolbar">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tips-box">
+                <h4>
+                  <i data-lucide="lightbulb"></i>
+                  Mẹo
+                </h4>
+                <ul>
+                  <li>Extension hoạt động trên Chrome 78+ và các trình duyệt Chromium (Edge, Brave, Opera...)</li>
+                  <li>Sau khi cài đặt, truy cập trang tín chỉ và refresh để extension hoạt động</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 2: Cài đặt & Tuỳ chỉnh -->
+          <section class="guide-section" id="cai-dat-tuy-chinh">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="settings"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Cài đặt & Tuỳ chỉnh</h2>
+                <p>Quản lý các tính năng của extension</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Bạn có thể bật/tắt các tính năng và truy cập các liên kết hữu ích thông qua
+                popup extension hoặc modal Settings trên Toolbox.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Cách 1: Mở Popup Extension</h3>
+                    <p>
+                      Click vào icon extension trên thanh công cụ Chrome để mở popup.
+                      Popup hiển thị trạng thái extension và các tuỳ chọn cài đặt.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_settings_popup.png" alt="Popup extension với các tuỳ chọn">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Cách 2: Mở Modal Settings từ Toolbox</h3>
+                    <p>
+                      Trên trang tín chỉ, nhấn nút <span class="icon-inline"><i data-lucide="settings"></i>
+                        Settings</span>
+                      (màu xám) trên Toolbox ở góc phải màn hình để mở modal cài đặt.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_settings_toolbox.png" alt="Nút Settings trên Toolbox">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Thống kê biểu đồ -->
+          <section class="guide-section" id="thong-ke">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Thống kê biểu đồ</h2>
+                <p>Xem biểu đồ điểm theo học kỳ và năm học</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Tính năng thống kê biểu đồ giúp bạn theo dõi xu hướng điểm số qua các học kỳ một cách trực quan
+                thông qua các loại biểu đồ đa dạng.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Truy cập trang "Lịch sử quá trình học tập"</h3>
+                    <p>
+                      Đăng nhập vào trang tín chỉ và vào menu "Lịch sử quá trình học tập"
+                    </p>
+                    <!-- <div class="step-image">
+                      <img src="images/guide/guide_chart_step1.png" alt="Menu Lịch sử quá trình học tập">
+                    </div> -->
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Mở Modal Thống kê</h3>
+                    <p>
+                      Nhấn vào nút <span class="icon-inline"><i data-lucide="bar-chart-3"></i> Thống kê</span>
+                      trên Toolbox ở góc phải màn hình để mở modal thống kê.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_chart_step2.png" alt="Toolbox với nút mở thống kê">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Khám phá các loại biểu đồ</h3>
+                    <p>
+                      Modal thống kê cung cấp nhiều tab với các loại biểu đồ khác nhau:
+                    </p>
+                    <ul style="margin: 12px 0 16px 20px; color: var(--text-secondary);">
+                      <li>Biểu đồ tròn: Phân bố điểm theo loại A, B, C, D, F</li>
+                      <li>Biểu đồ cột: So sánh điểm giữa các học kỳ</li>
+                      <li>Biểu đồ đường: Xu hướng điểm theo thời gian</li>
+                    </ul>
+                    <div class="step-image">
+                      <img src="images/guide/guide_chart_step3.png" alt="Modal thống kê với các loại biểu đồ">
+                    </div>
+                    <br>
+                    <div class="step-image">
+                      <img src="images/guide/guide_chart_step3_1.png" alt="Modal thống kê với các loại biểu đồ line">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Xem điểm nhanh -->
+          <section class="guide-section" id="xem-diem">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="eye"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Xem điểm nhanh</h2>
+                <p>Xem điểm thành phần ngay tại trang chính</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Không cần chuyển trang, bạn có thể xem chi tiết điểm thành phần của từng học phần
+                ngay tại danh sách điểm bằng cách click vào icon xem nhanh.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Tìm icon xem điểm</h3>
+                    <p>
+                      Tại trang "Quá trình học tập", mỗi học phần sẽ có một icon
+                      <span class="icon-inline"><i data-lucide="info"></i></span> bên cạnh tên học phần.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_viewmark_step1.png" alt="Icon xem điểm bên cạnh học phần">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Click để xem chi tiết</h3>
+                    <p>
+                      Nhấn vào icon để hiển thị popup chứa điểm thành phần:
+                      Điểm quá trình, Điểm giữa kỳ, Điểm thi, Điểm tổng kết.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_viewmark_step2.png" alt="Popup điểm thành phần">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tips-box">
+                <h4>
+                  <i data-lucide="lightbulb"></i>
+                  Mẹo
+                </h4>
+                <ul>
+                  <li>Điểm được lấy trực tiếp từ hệ thống, đảm bảo chính xác</li>
+                  <li>Click ra ngoài popup hoặc nhấn ESC để đóng</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5: Tính điểm cần đạt -->
+          <section class="guide-section" id="tinh-diem">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="target"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Tính điểm cần đạt</h2>
+                <p>Biết bạn cần bao nhiêu điểm thi để đạt loại mong muốn</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Tính năng này tự động tính toán số điểm thi bạn cần đạt để xếp loại A, B, C hoặc D
+                dựa trên điểm quá trình và công thức tính điểm của trường.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Xem điểm học phần</h3>
+                    <p>
+                      Khi xem điểm nhanh của một học phần (như hướng dẫn ở trên),
+                      phần "Điểm cần đạt" sẽ hiển thị tự động nếu học phần chưa có điểm thi.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_calcmark_step1.png" alt="Phần tính điểm cần đạt trong popup">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Hiểu kết quả</h3>
+                    <p>
+                      Extension sẽ hiển thị:
+                    </p>
+                    <ul style="margin: 12px 0 16px 20px; color: var(--text-secondary);">
+                      <li><strong style="color: #00d4aa;">Loại A:</strong> Điểm thi cần ≥ X.X</li>
+                      <li><strong style="color: #f97316;">Loại B:</strong> Điểm thi cần ≥ X.X</li>
+                      <li><strong style="color: #38bdf8;">Loại C:</strong> Điểm thi cần ≥ X.X</li>
+                      <li><strong style="color: #5d62b5;">Loại D:</strong> Điểm thi cần ≥ X.X</li>
+                    </ul>
+                    <div class="step-image">
+                      <img src="images/guide/guide_calcmark_step2.png" alt="Các mức điểm cần đạt cho từng loại">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="warning-box">
+                <h4>
+                  <i data-lucide="alert-triangle"></i>
+                  Lưu ý
+                </h4>
+                <p>
+                  Kết quả tính toán dựa trên công thức chuẩn của trường.
+                  Một số môn học có thể có công thức tính điểm khác, vui lòng tham khảo thêm từ giảng viên.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6: Xuất bảng điểm -->
+          <section class="guide-section" id="xuat-diem">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="file-down"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Xuất bảng điểm</h2>
+                <p>Tải bảng điểm về máy dưới dạng Excel hoặc CSV</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Tính năng xuất bảng điểm nâng cao cho phép bạn tải bảng điểm về máy với nhiều tuỳ chọn:
+                chọn loại dữ liệu, định dạng file, và xem trước trước khi xuất.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Mở Modal xuất bảng điểm</h3>
+                    <p>
+                      Nhấn vào nút <span class="icon-inline"><i data-lucide="download"></i> Xuất điểm</span>
+                      (màu xanh lá) trên Toolbox ở góc phải màn hình.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_export_step1.png" alt="Nút xuất bảng điểm trên Toolbox">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Chọn loại dữ liệu</h3>
+                    <p>
+                      Tick chọn các loại bảng điểm bạn muốn xuất:
+                    </p>
+                    <ul style="margin: 12px 0 16px 20px; color: var(--text-secondary);">
+                      <li>Quá trình học tập (QTHT)</li>
+                      <li>Kết quả học tập (KQHT)</li>
+                      <li>Thống kê tổng hợp</li>
+                    </ul>
+                    <div class="step-image">
+                      <img src="images/guide/guide_export_step2.png" alt="Chọn loại dữ liệu cần xuất">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Chọn định dạng file</h3>
+                    <p>
+                      Chọn định dạng xuất: <strong>Excel (.xlsx)</strong> hoặc <strong>CSV (.csv)</strong>.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_export_step3.png" alt="Chọn định dạng Excel hoặc CSV">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Xem trước và Xuất</h3>
+                    <p>
+                      Phần "Xem trước" sẽ hiển thị preview dữ liệu.
+                      Nhấn nút "Xuất bảng điểm" để tải file về máy.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_export_step4.png" alt="Xem trước dữ liệu và nút xuất">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tips-box">
+                <h4>
+                  <i data-lucide="lightbulb"></i>
+                  Mẹo
+                </h4>
+                <ul>
+                  <li>File được đặt tên tự động theo mã hoặc tên sinh viên và ngày xuất</li>
+                  <li>Định dạng Excel phù hợp để lưu trữ, CSV phù hợp để import vào các ứng dụng khác</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 7: Quick Menu -->
+          <section class="guide-section" id="quick-menu">
+            <div class="guide-header">
+              <div class="guide-icon">
+                <i data-lucide="pin"></i>
+              </div>
+              <div class="guide-title-group">
+                <h2>Menu truy cập nhanh</h2>
+                <p>Ghim các menu thường dùng ra header</p>
+              </div>
+            </div>
+            <div class="guide-content">
+              <p class="guide-intro">
+                Tính năng Quick Access Menu cho phép bạn ghim tối đa 5 menu thường sử dụng
+                ra header để truy cập nhanh hơn, thay vì phải tìm trong menu sidebar.
+              </p>
+              <div class="steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h3>Bật tính năng Quick Menu</h3>
+                    <p>
+                      Có 2 cách để bật tính năng này:
+                    </p>
+                    <ul style="margin: 12px 0 16px 20px; color: var(--text-secondary);">
+                      <li><strong>Cách 1:</strong> Mở popup extension → Bật toggle "Menu truy cập nhanh"</li>
+                      <li><strong>Cách 2:</strong> Nhấn nút <span class="icon-inline"><i
+                            data-lucide="settings"></i></span>
+                        trên Toolbox → Bật toggle trong modal Settings</li>
+                    </ul>
+                    <p class="section-link">
+                      <i data-lucide="arrow-right-circle"></i> Xem chi tiết tại mục: <a data-section="cai-dat-tuy-chinh"
+                        class="internal-link">"Cài đặt & Tuỳ chỉnh"</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h3>Chọn menu để ghim</h3>
+                    <p>
+                      Sau khi bật, modal cấu hình sẽ hiện ra.
+                      Tick chọn tối đa 5 menu bạn muốn ghim ra header.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_quickmenu_select.png" alt="Modal chọn menu để ghim">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h3>Sử dụng Quick Menu</h3>
+                    <p>
+                      Các menu đã ghim sẽ hiển thị trên header.
+                      Click vào để truy cập nhanh. Nhấn nút "Menu" để xem menu đầy đủ qua dropdown.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_quickmenu_header.png" alt="Quick Menu trên header">
+                    </div>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">4</div>
+                  <div class="step-content">
+                    <h3>Tuỳ chỉnh menu đã ghim</h3>
+                    <p>
+                      Nhấn nút <span class="icon-inline"><i data-lucide="settings"></i></span> trên thanh Quick Menu
+                      để mở lại modal cấu hình và thay đổi các menu đã ghim.
+                    </p>
+                    <div class="step-image">
+                      <img src="images/guide/guide_quickmenu_config.png" alt="Nút settings trên Quick Menu bar">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tips-box">
+                <h4>
+                  <i data-lucide="lightbulb"></i>
+                  Mẹo
+                </h4>
+                <ul>
+                  <li>Cài đặt menu ghim được đồng bộ giữa các thiết bị nếu bạn đăng nhập cùng tài khoản Chrome</li>
+                  <li>Nhấn "Bỏ ghim toàn bộ" để reset về trạng thái ban đầu</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+
+        </div>
+        <!-- End Guide Content Area -->
+      </div>
+      <!-- End Guide Layout -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="ums-husc-analyst.html">Trang chủ</a>
+        <a href="ums-husc-analyst.html#features">Tính năng</a>
+        <a href="ums-husc-analyst.html#faq">Hỏi đáp</a>
+        <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc"
+          target="_blank">Chrome Web Store</a>
+      </div>
+      <p class="footer-copyright">
+        © 2020-2026 ducphuc-dev. Made with <span class="heart">❤️</span> by ducphuc-dev
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Section Switching
+    const tocLinks = document.querySelectorAll('.toc-list a[data-section]');
+    const sections = document.querySelectorAll('.guide-section');
+
+    function switchSection(sectionId) {
+      // Update TOC active state
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.section === sectionId) {
+          link.classList.add('active');
+        }
+      });
+
+      // Show/hide sections
+      sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.id === sectionId) {
+          section.classList.add('active');
+        }
+      });
+
+      // Scroll to top of content on mobile
+      if (window.innerWidth <= 768) {
+        document.querySelector('.guide-content-area').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      // Update URL hash without scrolling
+      history.replaceState(null, null, '#' + sectionId);
+    }
+
+    // Add click handlers to TOC links
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchSection(link.dataset.section);
+      });
+    });
+
+    // Add click handlers to internal links
+    document.querySelectorAll('.internal-link[data-section]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchSection(link.dataset.section);
+        // Scroll to top of content
+        document.querySelector('.guide-content-area').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+    // Handle initial hash in URL
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      const matchingLink = document.querySelector(`.toc-list a[data-section="${hash}"]`);
+      if (matchingLink) {
+        switchSection(hash);
+      }
+    }
+
+    // Back to Top button
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>

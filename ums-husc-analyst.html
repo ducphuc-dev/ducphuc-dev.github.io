@@ -159,6 +159,13 @@
       gap: 10px;
     }
 
+    .logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
     .logo-icon {
       width: 36px;
       height: 36px;
@@ -237,6 +244,13 @@
       }
     }
 
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
     .badge {
       display: inline-flex;
       align-items: center;
@@ -247,7 +261,18 @@
       border-radius: var(--radius-xl);
       font-size: 0.85rem;
       color: var(--accent-primary);
-      margin-bottom: 24px;
+      margin-bottom: 0;
+    }
+
+    .badge-new {
+      background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.1) 100%);
+      border-color: rgba(251, 191, 36, 0.4);
+      color: #fbbf24;
+    }
+
+    .badge-new svg {
+      width: 16px;
+      height: 16px;
     }
 
     .badge-dot {
@@ -769,6 +794,68 @@
       font-size: 0.95rem;
     }
 
+    /* Feature Request CTA */
+    .feature-request-cta {
+      margin-top: 48px;
+      padding: 32px 40px;
+      background: linear-gradient(145deg, rgba(15, 35, 40, 0.8) 0%, rgba(10, 28, 32, 0.6) 100%);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .feature-request-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .feature-request-content > svg {
+      width: 40px;
+      height: 40px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .feature-request-text h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .feature-request-text p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .feature-request-cta .btn-secondary {
+      flex-shrink: 0;
+    }
+
+    .feature-request-cta .btn-secondary svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .feature-request-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+      }
+
+      .feature-request-content {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
     /* Showcase Section */
     .showcase {
       padding: 120px 0;
@@ -881,6 +968,91 @@
         0 30px 60px rgba(0, 0, 0, 0.6),
         0 0 0 1px rgba(0, 212, 170, 0.3),
         0 0 40px rgba(0, 212, 170, 0.15);
+    }
+
+    /* Dual Image Layout */
+    .showcase-image-dual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dual-image-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .dual-image-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dual-image-item img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: var(--radius-md);
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(0, 212, 170, 0.15);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      transition: all 0.4s ease;
+    }
+
+    .showcase-item:hover .dual-image-item img {
+      transform: scale(1.02);
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(0, 212, 170, 0.3),
+        0 0 25px rgba(0, 212, 170, 0.1);
+    }
+
+    .image-label {
+      font-size: 0.85rem;
+      color: var(--accent-primary);
+      font-weight: 500;
+      text-align: center;
+      padding: 6px 12px;
+      background: rgba(0, 212, 170, 0.1);
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      border-radius: var(--radius-sm);
+    }
+
+    .dual-image-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 212, 170, 0.1);
+      border: 1px solid rgba(0, 212, 170, 0.3);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dual-image-arrow svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-primary);
+    }
+
+    @media (max-width: 768px) {
+      .dual-image-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .dual-image-arrow {
+        transform: rotate(90deg);
+      }
+
+      .dual-image-item img {
+        max-width: 100%;
+      }
     }
 
     .showcase-content {
@@ -1282,6 +1454,60 @@
       color: var(--text-primary);
       font-size: 1.5rem;
       cursor: pointer;
+      padding: 8px;
+      z-index: 101;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 10, 15, 0.98);
+      z-index: 99;
+      padding-top: 100px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .mobile-menu.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+      padding: 40px 24px;
+    }
+
+    .mobile-menu-links a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      padding: 12px 24px;
+    }
+
+    .mobile-menu-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .mobile-menu-cta {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobile-menu-cta .btn-primary {
+      display: inline-flex;
     }
 
     /* Responsive */
@@ -1378,6 +1604,10 @@
       }
 
       .mobile-menu-btn {
+        display: block;
+      }
+
+      .mobile-menu {
         display: block;
       }
 
@@ -1503,28 +1733,57 @@
   <nav>
     <div class="container">
       <a href="#" class="logo">
-        <span class="logo-icon">U</span>
-        UMS HUSC
+        <img src="images/app/logo_64.png" alt="UMS HUSC Logo" class="logo-img">
+        UMS HUSC Analyst
       </a>
       <ul class="nav-links">
         <li><a href="#features">Tính năng</a></li>
         <li><a href="#showcase">Chi tiết</a></li>
+        <li><a href="guide.html">Hướng dẫn</a></li>
         <li><a href="#faq">Hỏi đáp</a></li>
+        <li><a href="https://forms.gle/8Juic2wfTrFVVpBQ6" target="_blank">Góp ý</a></li>
       </ul>
       <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
         target="_blank" class="nav-cta">Cài đặt ngay</a>
-      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+      <button class="mobile-menu-btn" aria-label="Menu" id="mobileMenuBtn">☰</button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu-links">
+      <li><a href="#features" class="mobile-link">Tính năng</a></li>
+      <li><a href="#showcase" class="mobile-link">Chi tiết</a></li>
+      <li><a href="guide.html">Hướng dẫn</a></li>
+      <li><a href="#faq" class="mobile-link">Hỏi đáp</a></li>
+      <li><a href="https://forms.gle/8Juic2wfTrFVVpBQ6" target="_blank">Góp ý</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
+        target="_blank" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+        </svg>
+        Cài đặt miễn phí
+      </a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            Miễn phí hoàn toàn
+          <div class="hero-badges">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Miễn phí hoàn toàn
+            </div>
+            <div class="badge badge-new">
+              <i data-lucide="sparkles"></i>
+              Phiên bản thế hệ thứ 3 ra mắt
+            </div>
           </div>
           <h1>UMS HUSC ANALYST</h1>
           <p>Tiện ích Chrome giúp sinh viên <span class="highlight-text">Đại học Khoa học - Đại học Huế</span> & <span
@@ -1643,8 +1902,8 @@
           <div class="feature-icon">
             <i data-lucide="file-spreadsheet"></i>
           </div>
-          <h3>Xuất bảng điểm QTHT</h3>
-          <p>Xuất bảng điểm QTHT và KQHT với chỉ 1 click, xuất định dạng excel.</p>
+          <h3>Xuất bảng điểm, dữ liệu khác</h3>
+          <p>Xuất bảng điểm QTHT, KQHT, thống kê tổng hợp tuỳ chỉnh, xuất định dạng excel, csv.</p>
         </div>
         <div class="feature-card animate-on-scroll stagger-1">
           <div class="feature-icon">
@@ -1658,8 +1917,45 @@
             <i data-lucide="sparkles"></i>
           </div>
           <h3>Giao diện hiện đại</h3>
-          <p>Font chữ đẹp mắt và giao diện được tối ưu để trực quan hơn so với mặc định.</p>
+          <p>Font chữ đẹp mắt và giao diện được tối ưu để trực quan hơn so với mặc định. Chế độ dark mode giúp chống mỏi
+            mắt.</p>
         </div>
+        <div class="feature-card animate-on-scroll stagger-3">
+          <div class="feature-icon">
+            <i data-lucide="pin"></i>
+          </div>
+          <h3>Menu truy cập nhanh</h3>
+          <p>Ghim tối đa 5 menu thường xuyên sử dụng ra header để truy cập nhanh hơn.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-4">
+          <div class="feature-icon">
+            <i data-lucide="file-down"></i>
+          </div>
+          <h3>Xuất điểm nâng cao</h3>
+          <p>Xuất bảng điểm với nhiều định dạng (XLSX, CSV), xem trước dữ liệu và tên file tùy chỉnh.</p>
+        </div>
+        <div class="feature-card animate-on-scroll stagger-1">
+          <div class="feature-icon">
+            <i data-lucide="toggle-right"></i>
+          </div>
+          <h3>Tuỳ chỉnh bật tắt tính năng</h3>
+          <p>Bật hoặc tắt các tính năng theo nhu cầu sử dụng ngay trong popup của extension.</p>
+        </div>
+      </div>
+
+      <!-- Feature Request CTA -->
+      <div class="feature-request-cta animate-on-scroll">
+        <div class="feature-request-content">
+          <i data-lucide="lightbulb"></i>
+          <div class="feature-request-text">
+            <h4>Bạn muốn thêm tính năng mới?</h4>
+            <p>Gửi yêu cầu của bạn để giúp tiện ích ngày càng hoàn thiện hơn!</p>
+          </div>
+        </div>
+        <a href="https://forms.gle/8Juic2wfTrFVVpBQ6" target="_blank" class="btn-secondary">
+          <i data-lucide="send"></i>
+          Gửi yêu cầu tại đây
+        </a>
       </div>
     </div>
   </section>
@@ -1724,6 +2020,54 @@
               <li><i data-lucide="hash" class="list-icon"></i> Tổng điểm trung bình hệ 4</li>
               <li><i data-lucide="award" class="list-icon"></i> Xếp loại học lực tổng kết</li>
               <li><i data-lucide="pie-chart" class="list-icon"></i> Thống kê số học phần đạt từng loại A, B, C, D</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-item animate-on-scroll reverse">
+        <div class="showcase-grid">
+          <div class="showcase-image showcase-image-dual">
+            <div class="dual-image-container">
+              <div class="dual-image-item">
+                <span class="image-label">Bật tính năng trong extension popup hoặc setting toolbar</span>
+                <img src="images/app/setting_toogle.png" alt="Bật Menu truy cập nhanh">
+              </div>
+              <div class="dual-image-arrow">
+                <i data-lucide="arrow-right"></i>
+              </div>
+              <div class="dual-image-item">
+                <span class="image-label">Chọn header để ghim ra ngoài</span>
+                <img src="images/app/pin_header.png" alt="Menu truy cập nhanh trên header">
+              </div>
+            </div>
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-number">4</div>
+            <h3>Menu truy cập nhanh</h3>
+            <p>Tùy chỉnh thanh điều hướng theo nhu cầu cá nhân, truy cập nhanh các chức năng thường dùng.</p>
+            <ul class="showcase-list">
+              <li><i data-lucide="pin" class="list-icon"></i> Ghim tối đa 5 menu yêu thích ra header</li>
+              <li><i data-lucide="settings" class="list-icon"></i> Bật tính năng qua popup của extension</li>
+              <li><i data-lucide="menu" class="list-icon"></i> Vẫn truy cập được menu đầy đủ qua dropdown</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="showcase-item animate-on-scroll">
+        <div class="showcase-grid">
+          <div class="showcase-image">
+            <img src="images/app/export_modal.png" alt="Xuất bảng điểm nâng cao">
+          </div>
+          <div class="showcase-content">
+            <div class="showcase-number">5</div>
+            <h3>Xuất bảng điểm nâng cao</h3>
+            <p>Xuất bảng điểm với đầy đủ tùy chọn, hỗ trợ nhiều định dạng và xem trước dữ liệu.</p>
+            <ul class="showcase-list">
+              <li><i data-lucide="file-spreadsheet" class="list-icon"></i> Hỗ trợ định dạng XLSX và CSV</li>
+              <li><i data-lucide="eye" class="list-icon"></i> Xem trước dữ liệu trước khi xuất</li>
+              <li><i data-lucide="file-text" class="list-icon"></i> Tên file tự động theo mã sinh viên và ngày xuất</li>
             </ul>
           </div>
         </div>
@@ -1827,7 +2171,7 @@
           <div class="faq-answer">
             <div class="faq-answer-content">
               Nếu gặp bất kỳ vấn đề nào, bạn có thể liên hệ trực tiếp với tác giả qua email <a
-                href="mailto:ducphucit1202@gmail.com">ducphucit1202@gmail.com</a> hoặc số điện thoại <a
+                href="mailto:felixforwork.dev@gmail.com">felixforwork.dev@gmail.com</a> hoặc số điện thoại <a
                 href="tel:03293221111">0329 3 22 111</a>. Mình sẽ hỗ trợ bạn sớm nhất có thể!
             </div>
           </div>
@@ -1854,7 +2198,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>
-            <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;">U</span>
+            <img src="images/app/logo_64.png" alt="UMS HUSC Logo" class="logo-img" style="width: 32px; height: 32px;">
             UMS HUSC Analyst
           </h3>
           <p>Tiện ích quản lý điểm học tập dành cho sinh viên ĐHKH Huế và ĐHNN Huế.</p>
@@ -1864,7 +2208,9 @@
           <ul>
             <li><a href="#features">Tính năng</a></li>
             <li><a href="#showcase">Chi tiết</a></li>
+            <li><a href="guide.html">Hướng dẫn</a></li>
             <li><a href="#faq">Hỏi đáp</a></li>
+            <li><a href="https://forms.gle/8Juic2wfTrFVVpBQ6" target="_blank">Góp ý tính năng</a></li>
             <li><a
                 href="https://chrome.google.com/webstore/detail/ums-husc-analyst/molgaipgjcjnmldejmkdjpcnmjbikgdc?authuser=0&hl=vi"
                 target="_blank">Chrome Web Store</a></li>
@@ -1874,8 +2220,8 @@
           <h4>Liên hệ</h4>
           <ul>
             <li><a href="tel:03293221111"><i data-lucide="phone" class="footer-icon"></i> 0329 3 22 111</a></li>
-            <li><a href="mailto:ducphucit1202@gmail.com"><i data-lucide="mail" class="footer-icon"></i>
-                ducphucit1202@gmail.com</a></li>
+            <li><a href="mailto:felixforwork.dev@gmail.com"><i data-lucide="mail" class="footer-icon"></i>
+                felixforwork.dev@gmail.com</a></li>
           </ul>
         </div>
         <div class="footer-donate">
@@ -1950,6 +2296,28 @@
         if (!isActive) {
           faqItem.classList.add('active');
         }
+      });
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let isMenuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      mobileMenu.classList.toggle('active', isMenuOpen);
+      mobileMenuBtn.textContent = isMenuOpen ? '✕' : '☰';
+      document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        isMenuOpen = false;
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.textContent = '☰';
+        document.body.style.overflow = '';
       });
     });
 
